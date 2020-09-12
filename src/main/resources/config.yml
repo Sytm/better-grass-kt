@@ -1,0 +1,29 @@
+seeds:
+  - WHEAT_SEEDS
+#  - PUMPKIN_SEEDS
+#  - MELON_SEEDS
+#  - PUMPKIN_SEEDS
+
+blocks:
+  - DIRT
+  - COARSE_DIRT
+  - MYCELIUM
+
+sound:
+  enabled: true
+  name: ITEM_SHOVEL_FLATTEN
+  volume: 10
+  pitch: 1
+
+particle:
+  enabled: true
+  name: VILLAGER_HAPPY
+  amount: 10
+  particleCenter:
+    x: 0
+    y: 1
+    z: 0
+  particleArea:
+    x: 0.3
+    y: 0.3
+    z: 0.3

@@ -1,0 +1,10 @@
+name: ${project.name}
+version: ${project.version}
+main: "de.md5lukas.bettergrass.BetterGrass"
+api-version: "1.13"
+authors:
+  - "Sytm"
+description: ${project.description}
+website: ${project.url}
+depend:
+  - "Kotlin"
