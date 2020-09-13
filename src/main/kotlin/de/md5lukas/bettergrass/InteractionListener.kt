@@ -17,12 +17,11 @@ class InteractionListener(private val main: BetterGrass) : Listener {
             && e.action == Action.RIGHT_CLICK_BLOCK
             && main.bgConfig.seeds.contains(item.type)
             && main.bgConfig.blocks.contains(block.type)) {
-
             item.amount--
             block.type = Material.GRASS_BLOCK
 
             val world = block.world
-            val loc = block.location
+            val loc = block.location.add(0.5, 0.5, 0.5) // Move the location to the center of the block
 
             val particleData = main.bgConfig.particleData
             if (particleData != null) {

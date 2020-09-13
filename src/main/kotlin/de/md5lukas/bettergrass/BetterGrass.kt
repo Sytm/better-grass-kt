@@ -9,6 +9,7 @@ class BetterGrass : JavaPlugin() {
 
     override fun onEnable() {
         bgConfig = BetterGrassConfig(this)
+        bgConfig.load()
         server.pluginManager.registerEvents(InteractionListener(this), this)
     }
 }

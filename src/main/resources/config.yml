@@ -12,7 +12,7 @@ blocks:
 sound:
   enabled: true
   name: ITEM_SHOVEL_FLATTEN
-  volume: 10
+  volume: 5
   pitch: 1
 
 particle:

@@ -20,6 +20,7 @@ class BetterGrassConfig(private val main: BetterGrass) {
         private set
 
     fun load() {
+        main.saveDefaultConfig()
         val cfg = main.config
 
         seeds.clear()
@@ -47,12 +48,12 @@ class BetterGrassConfig(private val main: BetterGrass) {
             return
         }
 
-        if(!cfg.getBoolean("enabled", false)) {
+        if (!cfg.getBoolean("enabled", false)) {
             soundData = null
             return
         }
 
-        val name = cfg.getString("sound")
+        val name = cfg.getString("name")
         if (name == null) {
             soundData = null
             main.logger.log(Level.WARNING, "There is no sound name provided")
@@ -74,6 +75,7 @@ class BetterGrassConfig(private val main: BetterGrass) {
             cfg.getDouble("pitch").toFloat(),
         )
     }
+
     private fun loadParticleData(cfg: ConfigurationSection?) {
         if (cfg == null) {
             particleData = null
@@ -119,5 +121,10 @@ class BetterGrassConfig(private val main: BetterGrass) {
     }
 
     class SoundData(val sound: Sound, val volume: Float, val pitch: Float)
-    class ParticleData(val particle: Particle, val amount: Int, val particleCenter: Vector, val particleArea: Vector)
+    class ParticleData(
+        val particle: Particle,
+        val amount: Int,
+        val particleCenter: Vector,
+        val particleArea: Vector
+    )
 }
